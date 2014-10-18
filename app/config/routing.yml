@@ -1,0 +1,15 @@
+devsoul_blog_admin:
+    resource: "@DevsoulBlogAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+devsoul_blog_model:
+    resource: "@DevsoulBlogModelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+devsoul_blog_frontend:
+    resource: "@DevsoulBlogFrontendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
