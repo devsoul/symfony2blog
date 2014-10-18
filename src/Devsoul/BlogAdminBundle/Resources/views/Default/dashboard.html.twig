@@ -1,0 +1,8 @@
+{% extends "@DevsoulBlogAdmin/layout.html.twig" %}
+{% block title %}{% endblock %}
+{% block section %}
+    Loaded bundles are:
+    {% for bundle in bundles %}
+        <p>{{bundle}}</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+username:
+  unique: Username already exists
+  blank: Username cannot be blank
+  email: Username must be a valid email
+
+password:
+  min: Password must be at least {{ limit }} characters long
+  max: Password cannot be longer than {{ limit }} characters long

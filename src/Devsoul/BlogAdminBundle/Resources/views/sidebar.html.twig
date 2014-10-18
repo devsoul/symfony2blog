@@ -1,0 +1,30 @@
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-menu nav-collapse">
+        <ul>
+            <li>
+                <a href="{{ path('devsoul_blogadmin_default_dashboard') }}">
+                    <i class="fa fa-home fa-fw"></i>
+                    <span class="menu-text">{{ 'home' | trans }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('user') }}">
+                    <i class="fa fa-book fa-fw"></i>
+                    <span class="menu-text">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('devsoul_blogadmin_default_dashboard') }}">
+                    <i class="fa fa-book fa-fw"></i>
+                    <span class="menu-text">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('devsoul_blogadmin_security_logout') }}">
+                    <i class="fa fa-power-off"></i>
+                    <span class="menu-text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

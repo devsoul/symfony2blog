@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Login page {% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+    {% block section %}
+        {% if error %}
+            <div class="alert alert-block alert-danger fade in">
+                <a class="close" aria-hidden="true" style="color: black;" href="#"
+                   data-dismiss="alert">×</a>
+                <h4>
+                    {{ error.message }}
+                </h4>
+            </div>
+        {% endif %}
+        {% if error %}
+            <div>{{ error.message }}</div>
+        {% endif %}
+
+        <form action="{{ path('devsoul_blogadmin_security_logincheck') }}" method="POST">
+            <div class="form-group">
+                <label for="username"> Username: </label>
+                <i class="fa fa-envelope"></i>
+                <input type="text" id="username" name="_username" class="form-control"
+                       value="{{ last_username }}"/>
+            </div>
+            <div class="form-group">
+                <label for="password"> Password: </label>
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" class="form-control" name="_password"/>
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="remember_me" name="_remember_me" />
+                <label for="remember_me">Keep me logged in</label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-danger">Login</button>
+            </div>
+        </form>
+    {% endblock %}
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends '@DevsoulBlogAdmin/layout.html.twig' %}
+
+{% block section %}
+    <h1>User creation</h1>
+
+    {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('user') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

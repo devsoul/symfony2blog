@@ -17,14 +17,14 @@ use Devsoul\BlogModelBundle\Entity;
 /**
  * Fixtures for the Post Entity
  */
-class Post extends AbstractFixture implements OrderedFixtureInterface
+class Posts extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritdoc}
      */
     public function getOrder()
     {
-        return 15;
+        return 25;
     }
 
     /**
