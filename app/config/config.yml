@@ -70,3 +70,17 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Doctrine Extensions Configuration
+stof_doctrine_extensions:
+  orm:
+    default:
+      timestampable: true
+      sluggable: true
+
+#Doctrine Migrations
+doctrine_migrations:
+    dir_name: %kernel.root_dir%/DoctrineMigrations
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
