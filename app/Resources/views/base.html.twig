@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets filter='cssrewrite'
+        '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css'
+        '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap-theme.min.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+        {% endstylesheets %}
+    {% endblock %}
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {% javascripts
+    '%kernel.root_dir%/../vendor/components/jquery/jquery.min.js'
+    '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.min.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+</body>
 </html>
