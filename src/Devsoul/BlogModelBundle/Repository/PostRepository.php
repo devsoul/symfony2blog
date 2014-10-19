@@ -7,7 +7,7 @@
  *
  */
 
-namespace Devsoul\ModelBundle\Repository;
+namespace Devsoul\BlogModelBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Devsoul\BlogModelBundle\Entity\Post;

@@ -19,7 +19,7 @@ use Devsoul\UtilsBundle\Entity;
  * Post
  *
  * @ORM\Table("posts")
- * @ORM\Entity(repositoryClass="Devsoul\ModelBundle\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="Devsoul\BlogModelBundle\Repository\PostRepository")
  */
 class Post extends Entity\Timestampable
 {
