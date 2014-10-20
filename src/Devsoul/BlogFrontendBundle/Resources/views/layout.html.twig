@@ -1,0 +1,40 @@
+{% extends "::base.html.twig" %}
+{% block customstyles %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/devsoulblogfrontend/css/home.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <!--Header-->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="{{ path('devsoul_blogfrontend_post_index') }}">{{ 'home' | trans }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End of Header-->
+        <div class="container">
+            <div class="row" id="heading">
+                <h1>{{ 'blog' | trans }}<br>
+                    <small>{{ 'slogan' | trans }}</small>
+                </h1>
+            </div>
+            {% block sidebar %}{% endblock %}
+            <section>
+                {% for type, messages in app.session.flashBag.all() %}
+                    {% for message in messages %}
+                        <p class="session-message">
+                            {{ message }}
+                        </p>
+                    {% endfor %}
+                {% endfor %}
+                {% block section %} {% endblock %}
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p> {{ 'now' | date('Y') }} Blog</p>
+    </footer>
+{% endblock %}

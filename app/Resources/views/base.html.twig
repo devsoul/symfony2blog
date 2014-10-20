@@ -10,17 +10,18 @@
         <link rel="stylesheet" href="{{ asset_url }}">
         {% endstylesheets %}
     {% endblock %}
-    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+    {% block customstyles %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
 {% block body %}{% endblock %}
 {% block javascripts %}
     {% javascripts
-    '%kernel.root_dir%/../vendor/components/jquery/jquery.min.js'
-    '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.min.js' %}
+    '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.min.js'
+    %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
-
+    {% block customjs %}{% endblock %}
 {% endblock %}
 </body>
 </html>

@@ -1,0 +1,30 @@
+{% extends "DevsoulBlogFrontendBundle::layout.html.twig" %}
+
+{% block title %} {{ post.title }} {% endblock %}
+{% block section %}
+<div class="container news">
+    <p class="date">
+        <span class="day">
+            {{ post.createdAt | date('j') }}
+        </span>
+        <br>
+        <span class="month">
+             {{ post.createdAt | date('M') }}
+        </span>
+        <br>
+        <span class="year">
+             {{ post.createdAt | date('Y') }}
+        </span>
+    </p>
+    <h3>
+            <h2>{{ post.title | trans }}</h2>
+    </h3>
+    <p class="author">
+        By <a href="#">{{ post.author.name }}</a>
+    </p>
+
+    <p>
+        {{ post.body | raw }}
+    </p>
+</div>
+    {% endblock %}

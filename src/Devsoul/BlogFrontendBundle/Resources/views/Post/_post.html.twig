@@ -1,0 +1,30 @@
+<div class="container news">
+    <p class="date">
+        <span class="day">
+            {{ post.createdAt | date('j') }}
+        </span>
+        <br>
+        <span class="month">
+             {{ post.createdAt | date('M') }}
+        </span>
+        <br>
+        <span class="year">
+             {{ post.createdAt | date('Y') }}
+        </span>
+    </p>
+    <h3>
+        <a href="{{ path('devsoul_blogfrontend_post_show', {slug: post.slug}) }}">
+            <h2>{{ post.title | trans }}</h2>
+        </a>
+    </h3>
+    <p class="author">
+        By <a href="#">{{ post.author.name }}</a>
+    </p>
+
+    <p>
+        {{ post.body | truncate(700) | raw}} &#8212;
+    </p>
+    <a href="{{ path('devsoul_blogfrontend_post_show', {slug: post.slug}) }}">
+        {{ 'read.more' | trans }} &raquo;
+    </a>
+</div>

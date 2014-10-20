@@ -1,0 +1,22 @@
+blog: Symfony's Blog
+slogan: Development in progress...
+home: Home
+on: on
+by: by
+read.more: Read more
+name: name
+send: Send
+post:
+  plural: Posts
+  latest: Latest posts
+  on: Posted on
+  by: Posts by
+  by.author: Posts by %name%
+  comments: '{0} No comments| {1} %count% comment| ]1,Inf] %count% comments'
+comment:
+  singular: Comment
+  plural: Comments
+  write: Write your comment
+author:
+  title: Author
+  empty.posts: This author did not write any posts yet

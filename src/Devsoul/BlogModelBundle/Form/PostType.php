@@ -16,7 +16,10 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('body')
+            ->add('body', 'textarea', array(
+                'attr' => array(
+                    'class' => 'ckeditor')
+            ))
             ->add('slug')
             ->add('author', 'entity', array(
                 'class' => 'Devsoul\BlogModelBundle\Entity\Author',
